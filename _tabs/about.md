@@ -4,8 +4,8 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-Hi Guys! My Name is Gopi Krishna Menon, and I am a PhD scholar at IIIT-Delhi (India). I research in the compilers domain and love playing with
-Optimizations, Language Design and Operating Systems design and development (Linux). 
+Hi Guys! My Name is Gopi Krishna Menon, and I am a PhD scholar at IIIT-Delhi (India). My research is in domain of Compilers and love playing with
+Optimizations, Language Design and OS development. 
 
 
 | Favorite OS                    | Windows 11, Linux (Arch and Ubuntu variants)         |
@@ -16,4 +16,4 @@ Optimizations, Language Design and Operating Systems design and development (Lin
 
 Apart from programming, I love reading non-fiction stuff (Books related to Clean Code, Design Patterns etc) Travelling, Art (I love creating 2D animations) and watching gameplays.
 
-You can contact me here at **krishnagopi487@gmail.com**
+You can contact me here at [krishnagopi487@gmail.com](mailto:krishnagopi487@gmail.com)
