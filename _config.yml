@@ -20,7 +20,7 @@ timezone: Asia/Kolkata
 
 title: "cool-dev"                          # the main title
 
-tagline: GK's Blog   # it will display as the sub-title
+tagline: "Personal Experiences, Tips and Tricks related to Linux"   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   Gopi Krishna Menon's personal blog
@@ -31,8 +31,6 @@ url: ''
 github:
   username: gopi487krishna             # change to your github username
 
-twitter:
-  username: cosmo_ferrito  
 
 social:
   # Change to your full name.
