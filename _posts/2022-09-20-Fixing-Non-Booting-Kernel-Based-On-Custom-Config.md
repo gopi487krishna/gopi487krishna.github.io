@@ -2,6 +2,7 @@
 layout: post
 title: Fixing a non booting kernel based on custom kernel config file
 author: Gopi Krishna Menon
+tags: quickfix
 ---
 Recently I was trying to migrate my kernel config across Virtual Box, VMware and
 Qemu based VM's and noticed that in some of the cases, I was not able to boot
