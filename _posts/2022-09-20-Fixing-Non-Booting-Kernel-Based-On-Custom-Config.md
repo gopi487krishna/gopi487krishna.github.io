@@ -60,12 +60,19 @@ file.
 If there are too many options to be configured, you can use `awk` and `sed` to
 add the config options automatically
 
-- We know that last word represents the config option to be set. So run the
-  command `make localmodconfig | awk ---` to get the last column from these
-  messages and store in a textfile called `add_config_opts.txt`
-- Open the file and remove any lines that do not start with **CONFIG**
-- Now close the file and run `sed ---` to transform the text and add `=y` in
-  front of all the config options that we obtained. 
+- First save the output of `localmodconfig` in a text file
+```bash
+make localmodconfig > add_opts.txt 2>&1
+```
+- Now run the `awk` command to get the last column representing the config option
+and save it to a new file
+```bash
+awk '{print $(NF)}' add_opts.txt > add_opts_cleaned.txt       
+```
+- Now to put `=y` in front of these configs we use the `sed` command
+```bash
+sed -i s/$/=y/ add_opts_cleaned.txt
+```
 - Finally open the file, take a look at if everything is correct and copy paste
   the entire content of the file into `.config` file
 - Now run `make menuconfig or make nconfig`. These targets will automatically
@@ -76,3 +83,10 @@ add the config options automatically
 
 ### Step 5 : Continuing the Compilation
 Continue the kernel compilation by running `make -j$(nproc)`
+
+## Conclusion
+Using this method will help you to boot into the kernel. If you want to get 
+a complete list of the kernel modules required (for running everything as per your
+requirements, you can have a look at
+[modprobed-db](https://github.com/graysky2/modprobed-db)
+
