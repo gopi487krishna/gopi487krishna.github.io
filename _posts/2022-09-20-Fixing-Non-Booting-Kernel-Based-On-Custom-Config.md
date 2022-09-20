@@ -30,12 +30,13 @@ We will start with a fresh build of the kernel so reboot into the default kernel
 and switch to the kernel build directory and run `make mrproper`. Invoking this
 target will ensure that all the build artifacts generated during the build will
 be removed (including the config file). 
-
+<script id="asciicast-G1m1laR2RvG2p4MSm4jwvZpVm" src="https://asciinema.org/a/G1m1laR2RvG2p4MSm4jwvZpVm.js" async></script>
 ### Step 2 : Copying the config file
 Copy the config file into the kernel build directory and rename it to .config.
 After that run `make nconfig` or `make menuconfig` and press escape (and save
 the config if a prompt appears). Doing this will update the config file for the
 kernel version being used.
+<script id="asciicast-6R2CewYM88Vp6UBdaM7U1Btb1" src="https://asciinema.org/a/6R2CewYM88Vp6UBdaM7U1Btb1.js" async></script>
 
 ### Step 3 : Running localmodconfig
 Run `make localmodconfig` to enable modules presently being used by the kernel.
@@ -45,7 +46,9 @@ run `menuconfig` or `nconfig` to see if important options are enabled).
 But if there are some warnings saying that the config option is disabled or not
 present go to **Step 4**
 
-### Step 4 : Setting the config options 
+<script id="asciicast-SdX7cM2fPazx2PuT4cDSixI1s" src="https://asciinema.org/a/SdX7cM2fPazx2PuT4cDSixI1s.js" async></script>
+
+### Step 4 : Setting additional config options 
 Looking at the messages given by local modconfig, we can see that the last
 word of these messages contains the `config option (starting with CONFIG)` that
 needs to be set in the `.config` file. So just open the file using your
@@ -67,6 +70,8 @@ add the config options automatically
 - Now run `make menuconfig or make nconfig`. These targets will automatically
   set the additional config options required. Now press `ESC` key on your
   keyboard and save the configuration.
+
+<script id="asciicast-khyuEsWWS1QLj5b5SFWT16GuX" src="https://asciinema.org/a/khyuEsWWS1QLj5b5SFWT16GuX.js" async></script>
 
 ### Step 5 : Continuing the Compilation
 Continue the kernel compilation by running `make -j$(nproc)`
