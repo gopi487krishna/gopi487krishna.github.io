@@ -197,5 +197,12 @@ window manager to understand how to spawn a daemon after startup
 has certainly reduced
 
 
+## Special Thanks !
 
+A special thanks to my friend [Nikhil Kumar](https://github.com/NikhilKumar1999) for helping me complete this 
+project. This was my very first attempt at working with hardware stuff
+and his excellent knowledge in embedded electronics helped me get started
+easily. Also his deep insights on how this project can be improved further
+(such as using low cost board, introducing new combinations) is really
+interesting and I am planning to implement them further down the road.
 
