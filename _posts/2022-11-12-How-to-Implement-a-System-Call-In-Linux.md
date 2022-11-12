@@ -1,4 +1,10 @@
-
+---
+layout: post
+title: How to Implement a System Call in Linux
+author: Gopi Krishna Menon
+tags: Saturday-Posts
+---
+R
 In this post we will learn about how to implement a simple system call in Linux that will print `Invoked Hello System Call`  into the kernel log buffer.
 
 ## Background
