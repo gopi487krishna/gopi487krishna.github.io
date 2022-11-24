@@ -100,12 +100,16 @@ core-$(CONFIG_IO_URING) += io_uring/
 
 ```bash
 make -j$(nproc)
-sudo cp -v arch/x86_64/boot/bzImage /boot/vmlinuz-***
 sudo make modules_install
-# Initramfs script to generate the initramfs for the kernel 
+sudo cp -v arch/x86_64/boot/bzImage /boot/vmlinuz-***
+sudo mkinitcpio -k 5.19.9 -g /boot/initramfs-***.img
+grub-mkconfig -o /boot/grub/grub.cfg
+reboot
+
+# replace *** with any string like "linux_abc" or version number in both commands(eg. /boot/vmlinuz-linux_abc  & initramfs-linux_abc.img)
 ```
 
-- Once you have rebooted the kernel, test the systemcall using the following C program
+- Once you have rebooted the kernel(make sure you boot with the new compiled kernel from advanced options while rebooting), test the systemcall using the following C program
 
 ```c
 #include <stdio.h>
@@ -134,6 +138,11 @@ int main()
 
 ```bash
 gcc -o test test.c
+```
+- Run the compiled file
+
+```bash
+./test
 ```
 - Now in the kernel buffer you should see a message printed as shown below
 
