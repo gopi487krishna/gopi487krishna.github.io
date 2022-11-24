@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to Implement a System Call in Linux
-author: Gopi Krishna Menon
+author: Gopi Krishna Menon, Ankit Kumar
 tags: Saturday-Posts
 ---
 R
